@@ -3,10 +3,11 @@ import { IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/angular/stan
 
 @Component({
   selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  standalone: true,
+  templateUrl: './home.component.html',
+  styleUrls: ['home.component.scss'],
   imports: [IonHeader, IonToolbar, IonTitle, IonContent],
 })
-export class HomePage {
+export class HomeComponent {
   constructor() {}
 }
