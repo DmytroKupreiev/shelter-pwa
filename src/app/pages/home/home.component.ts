@@ -2,6 +2,7 @@ import { Component, AfterViewInit, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonHeader, IonToolbar, IonTitle, IonContent, IonCard, IonCardHeader, IonCardTitle, IonCardContent } from '@ionic/angular/standalone';
 import { AnimalService, Animal } from '../../service/animal.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +12,7 @@ import { AnimalService, Animal } from '../../service/animal.service';
   imports: [CommonModule, IonCardContent, IonCardTitle, IonCardHeader, IonCard, IonHeader, IonToolbar, IonTitle, IonContent],
 })
 export class HomeComponent implements AfterViewInit, OnInit {
-  constructor(private animalService: AnimalService) {}
+  constructor(private animalService: AnimalService, private router: Router) {}
 
   animals: Animal[] = [];
   randomAnimals: Animal[] = [];
@@ -54,10 +55,10 @@ export class HomeComponent implements AfterViewInit, OnInit {
   }
   
   navigateToAnimals() {
-
+    this.router.navigate(['/animals']);
   }
 
   navigateToContact() {
-
+    this.router.navigate(['/contact']);
   }
 }
