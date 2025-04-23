@@ -29,30 +29,32 @@ export class HomeComponent implements AfterViewInit, OnInit {
   }
 
   ngAfterViewInit(): void {
-    if ((window as any).FinisherHeader) {
-      new (window as any).FinisherHeader({
-        count: 100,
-        size: { min: 1, max: 2, pulse: 0 },
-        speed: {
-          x: { min: 0, max: 0.4 },
-          y: { min: 0, max: 0.6 }
-        },
-        colors: {
-          background: "#1e302b",
-          particles: ["#fbfcca", "#d7f3fe", "#ffd0a7"]
-        },
-        blending: "none",
-        opacity: {
-          center: 1,
-          edge: 0.5
-        },
-        skew: -2,
-        shapes: ["c"]
-      });
-    } else {
-      console.error('FinisherHeader not loaded');
-    }
-  }
+    setTimeout(() => {
+      if ((window as any).FinisherHeader) {
+        new (window as any).FinisherHeader({
+          count: 100,
+          size: { min: 1, max: 2, pulse: 0 },
+          speed: {
+            x: { min: 0, max: 0.4 },
+            y: { min: 0, max: 0.6 }
+          },
+          colors: {
+            background: "#1e302b",
+            particles: ["#fbfcca", "#d7f3fe", "#ffd0a7"]
+          },
+          blending: "none",
+          opacity: {
+            center: 1,
+            edge: 0.5
+          },
+          skew: -2,
+          shapes: ["c"]
+        });
+      } else {
+        console.error('FinisherHeader not loaded');
+      }
+    }, 0);
+  }  
   
   navigateToAnimals() {
     this.router.navigate(['/animals']);
