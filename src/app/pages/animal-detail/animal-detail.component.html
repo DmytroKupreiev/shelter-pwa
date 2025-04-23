@@ -1,5 +1,22 @@
 <ion-header class="finisher-header">
   <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button fill="clear" (click)="navigateToHome()">
+        <ion-icon name="home-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+    
+      <ion-button fill="clear" (click)="navigateToFavorites()">
+        <ion-icon name="heart-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+
+      <ion-button fill="clear" (click)="navigateToList()">
+        <ion-icon name="list-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+    
+      <ion-button fill="clear" (click)="navigateToContacts()">
+        <ion-icon name="call-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
     <ion-title>Animal Details</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -15,11 +32,5 @@
         <p *ngFor="let line of animal.description">{{ line }}</p>
       </div>
     </div>
-  </div>
-
-  <div class="back-button-container">
-    <button class="button" (click)="navigateToList()">
-      <p>Back to list</p>
-    </button>
   </div>
 </ion-content>

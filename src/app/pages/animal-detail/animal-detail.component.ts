@@ -2,23 +2,26 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AnimalService, Animal } from '../../service/animal.service';
 import { CommonModule } from '@angular/common';
-import { IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/angular/standalone';
+import { IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonIcon, IonButtons } from '@ionic/angular/standalone';
+import { addIcons } from 'ionicons';
+import { homeOutline, listOutline, heartOutline, callOutline } from 'ionicons/icons';
 
 @Component({
   selector: 'app-animal-details',
   standalone: true,
   templateUrl: './animal-detail.component.html',
   styleUrls: ['./animal-detail.component.scss'],
-  imports: [ CommonModule, IonHeader, IonToolbar, IonTitle, IonContent ]
+  imports: [IonButtons, IonIcon, IonButton,  CommonModule, IonHeader, IonToolbar, IonTitle, IonContent ]
 })
 export class AnimalDetailsComponent implements OnInit, AfterViewInit {
   animal?: Animal;
 
-  constructor(
-    private route: ActivatedRoute,
-    private animalService: AnimalService,
-    private router: Router
-  ) {}
+  constructor(private route: ActivatedRoute, private animalService: AnimalService, private router: Router) {
+    addIcons({ 'home-outline': homeOutline, 
+               'list-outline': listOutline, 
+               'heart-outline': heartOutline, 
+               'call-outline': callOutline });
+  }
 
   ngOnInit(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
@@ -59,4 +62,14 @@ export class AnimalDetailsComponent implements OnInit, AfterViewInit {
   navigateToList() {
     this.router.navigate(['/animals']);
   }
+  navigateToHome() {
+    this.router.navigate(['/home']);
+  }
+  navigateToFavorites(){
+
+  }
+  navigateToContacts(){
+    this.router.navigate(['/contact']);
+  }
+
 }

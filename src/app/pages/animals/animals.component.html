@@ -1,5 +1,18 @@
 <ion-header class="finisher-header">
   <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button fill="clear" (click)="navigateToHome()">
+        <ion-icon name="home-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+    
+      <ion-button fill="clear" (click)="navigateToFavorites()">
+        <ion-icon name="heart-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+    
+      <ion-button fill="clear" (click)="navigateToContacts()">
+        <ion-icon name="call-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
     <ion-title>Available Animals</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -13,11 +26,5 @@
         <p>{{ animal.age }}</p>
       </ion-card-header>
     </ion-card>
-  </div>
-
-  <div class="back-button-container">
-    <button class="button" (click)="navigateToHome()">
-      <p>Back to main page</p>
-    </button>
   </div>
 </ion-content>

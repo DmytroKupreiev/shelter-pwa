@@ -1,35 +1,48 @@
 .finisher-header {
-    position: relative;
-    height: 150px;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  
+  position: relative;
+  height: 150px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  --background: transparent;
+  --ion-toolbar-background: transparent;
+  --ion-toolbar-border-color: transparent;
+
+  ion-toolbar {
     --background: transparent;
-    --ion-toolbar-background: transparent;
-    --ion-toolbar-border-color: transparent;
-  
-    ion-toolbar {
-      --background: transparent;
-      --border-width: 0 !important;
-      --border-color: transparent;
-      background: transparent !important;
-      box-shadow: none;
+    --border-width: 0 !important;
+    --border-color: transparent;
+    background: transparent !important;
+    box-shadow: none;
+    color: white;
+    position: relative;
+    padding: 0;
+
+    ion-title {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      text-align: center;
+      font-size: 32px;
+      font-weight: bold;
       color: white;
-      justify-content: center;
-  
-      ion-title {
-        width: 100%;
-        text-align: center;
-        font-size: 32px;
-        font-weight: bold;
-        color: white;
-        background: transparent !important;
-        --background: transparent;
-      }
+      padding: 0;
+      margin: 0;
+    }
+
+    ion-buttons {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 10;
     }
   }
+}
   
   ion-content {
     --background: rgb(232, 232, 232) !important;
@@ -80,81 +93,5 @@
       font-size: 14px;
       color: #cfcfcf;
     }
-  }
-
-  .back-button-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 32px;
-    margin-top: 16px;
-  }
-
-  .button {
-    all: unset;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    width: 200px;
-    padding: 0.4em 1.2em;
-    border: mediumspringgreen solid 0.15em;
-    border-radius: 0.25em;
-    color: #274137;
-    font-size: 0.9em;
-    font-weight: 600;
-    cursor: pointer;
-    overflow: hidden;
-    transition: border 300ms, color 300ms;
-    user-select: none;
-    margin-top: 10px;
-    box-sizing: border-box;
-  }
-  
-  .button p {
-    z-index: 1;
-    margin: 0;
-  }
-  
-  .button:hover {
-    color: #ffffff;
-    background-color: #274137;
-  }
-  
-  .button:active {
-    border-color: teal;
-  }
-  
-  .button::after, .button::before {
-    content: "";
-    position: absolute;
-    width: 9em;
-    aspect-ratio: 1;
-    background: mediumspringgreen;
-    opacity: 50%;
-    border-radius: 50%;
-    transition: transform 500ms, background 300ms;
-  }
-  
-  .button::before {
-    left: 0;
-    transform: translateX(-8em);
-  }
-  
-  .button::after {
-    right: 0;
-    transform: translateX(8em);
-  }
-  
-  .button:hover:before {
-    transform: translateX(-1em);
-  }
-  
-  .button:hover:after {
-    transform: translateX(1em);
-  }
-  
-  .button:active:before,
-  .button:active:after {
-    background: teal;
   }
   

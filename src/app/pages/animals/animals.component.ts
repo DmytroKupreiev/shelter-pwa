@@ -1,21 +1,28 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Router } from '@angular/router';
-import { IonHeader, IonToolbar, IonTitle, IonContent, IonCard, IonCardHeader, IonCardTitle, IonImg } from '@ionic/angular/standalone';
+import { IonHeader, IonToolbar, IonTitle, IonContent, IonCard, IonCardHeader, IonCardTitle, IonImg, IonButtons, IonButton, IonIcon } from '@ionic/angular/standalone';
 import { AnimalService, Animal } from '../../service/animal.service';
+import { addIcons } from 'ionicons';
+import { homeOutline, listOutline, heartOutline, callOutline } from 'ionicons/icons';
 
 @Component({
   selector: 'app-animals',
   standalone: true,
   templateUrl: './animals.component.html',
   styleUrls: ['./animals.component.scss'],
-  imports: [ CommonModule, RouterModule, IonHeader, IonToolbar, IonTitle, IonContent, IonCard, IonCardHeader, IonCardTitle, IonImg]
+  imports: [IonIcon, IonButton, IonButtons,  CommonModule, RouterModule, IonHeader, IonToolbar, IonTitle, IonContent, IonCard, IonCardHeader, IonCardTitle, IonImg]
 })
 export class AnimalsComponent  implements OnInit, AfterViewInit {
 
   animals: Animal[] = [];
 
-  constructor(private animalService: AnimalService, private router: Router) {}
+  constructor(private animalService: AnimalService, private router: Router) {
+    addIcons({ 'home-outline': homeOutline, 
+               'list-outline': listOutline, 
+               'heart-outline': heartOutline, 
+               'call-outline': callOutline });
+  }
 
   ngOnInit(): void {
     this.animalService.getAnimals().subscribe({
@@ -54,6 +61,12 @@ export class AnimalsComponent  implements OnInit, AfterViewInit {
 
   navigateToHome() {
     this.router.navigate(['/home']);
+  }
+  navigateToFavorites(){
+
+  }
+  navigateToContacts(){
+    this.router.navigate(['/contact']);
   }
 
   goToAnimalDetails(id: number): void {
