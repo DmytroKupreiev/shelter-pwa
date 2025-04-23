@@ -1,3 +1,23 @@
-<p>
-  animals works!
-</p>
+<ion-header class="finisher-header">
+  <ion-toolbar>
+    <ion-title>Available Animals</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="animal-grid">
+    <ion-card *ngFor="let animal of animals" class="animal-card" (click)="goToAnimalDetails(animal.id)">
+      <ion-img [src]="animal.photo" alt="{{ animal.name }}"></ion-img>
+      <ion-card-header>
+        <ion-card-title>{{ animal.name }}</ion-card-title>
+        <p>{{ animal.age }}</p>
+      </ion-card-header>
+    </ion-card>
+  </div>
+
+  <div class="back-button-container">
+    <button class="button" (click)="navigateToHome()">
+      <p>Back to main page</p>
+    </button>
+  </div>
+</ion-content>
