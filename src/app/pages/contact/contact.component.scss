@@ -1,0 +1,84 @@
+@import '../animals/animals.component.scss';
+
+ion-content {
+    --background: rgb(232, 232, 232) !important;
+    background: rgb(232, 232, 232) !important;
+    padding: 24px;
+  }
+  
+  .contact-card {
+    background-color: #274137;
+    border-radius: 16px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+  
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    }
+  
+    ion-card-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  
+      p {
+        margin-bottom: 12px;
+        font-size: 15px;
+        line-height: 1.4;
+        text-align: center;
+  
+        strong {
+          color: #fff;
+        }
+  
+        a {
+          color: #a6d3a0;
+          text-decoration: none;
+  
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+  
+  ion-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #274137;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  .contact-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px auto;
+    text-align: center;
+    padding-top: 8px;
+  
+    img {
+      width: 100%;
+      max-width: 470px;
+      border-radius: 16px;
+      margin-bottom: 12px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    }
+  
+    h2 {
+      font-size: 20px;
+      color: #274137;
+      font-weight: bold;
+    }
+  }

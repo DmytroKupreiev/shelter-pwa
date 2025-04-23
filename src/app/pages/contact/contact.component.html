@@ -1,3 +1,33 @@
-<p>
-  contact works!
-</p>
+<ion-header class="finisher-header">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button fill="clear" (click)="navigateToHome()">
+        <ion-icon name="home-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+    
+      <ion-button fill="clear" (click)="navigateToFavorites()">
+        <ion-icon name="heart-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+
+      <ion-button fill="clear" (click)="navigateToList()">
+        <ion-icon name="list-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Contact Information</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="contact-card">
+    <ion-card-content>
+      <p><strong>Address:</strong> 123 Shelter St, Washington, Unites States of America</p>
+      <p><strong>Phone:</strong> <a href="tel:+380441234567"> (555) 555-1234</a></p>
+      <p><strong>Email:</strong> <a href="mailto:info&#64;shelter.ua"> info&#64;shelter.com</a></p>
+      <p><strong>Hours:</strong> Mon - Fri, 9:00 - 18:00</p>
+    </ion-card-content>
+  </ion-card>
+  <div class="contact-banner">
+    <img src="https://images.wagwalkingweb.com/media/daily_wag/blog_articles/hero/1651153661.2751184/a-day-in-the-life-of-an-animal-shelter-volunteer.png" alt="Help our pets" />
+    <h2>Help our little pets to find new home!</h2>
+  </div>
+</ion-content>
