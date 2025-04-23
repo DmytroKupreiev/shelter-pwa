@@ -8,7 +8,8 @@
         "She ended up in the shelter due to a difficult situation in her owners' family.",
         "Now she is ready to go to another, loving family!"
       ],
-      "photo": "https://assets.elanco.com/8e0bf1c2-1ae4-001f-9257-f2be3c683fb1/fca42f04-2474-4302-a238-990c8aebfe8c/Siamese_cat_1110x740.jpg"
+      "photo": "https://assets.elanco.com/8e0bf1c2-1ae4-001f-9257-f2be3c683fb1/fca42f04-2474-4302-a238-990c8aebfe8c/Siamese_cat_1110x740.jpg",
+      "age": "2 years"
     },
     {
       "id": 2,
@@ -19,7 +20,8 @@
         "came to us from the street.He loves to purr and play with soft toys. The perfect friend for those who dream ", 
         "of comfort and warmth at home."
       ],
-      "photo": "https://i.pinimg.com/736x/fe/79/66/fe79664d7c6cfb8e2bbb7066c73dbdee.jpg"
+      "photo": "https://i.pinimg.com/736x/fe/79/66/fe79664d7c6cfb8e2bbb7066c73dbdee.jpg",
+      "age": "0.6 year"
     },
     {
         "id": 3,
@@ -31,7 +33,8 @@
           " strong, intelligent dog looking for a new family. Jake is ready to protect those who will give him a home, love and a ",
           "second chance at happiness."
         ],
-        "photo": "https://www.dogsblog.com/wp-content/uploads/2025/04/Samu_2025-03-17_08-v-768x796.webp"
+        "photo": "https://www.dogsblog.com/wp-content/uploads/2025/04/Samu_2025-03-17_08-v-768x796.webp",
+        "age": "4 years"
     },
     {
         "id": 4,
@@ -42,8 +45,9 @@
           " curious and playful, loves to purr softly in your arms and watch the world go by from the window. Pepper is looking for a", 
           " home where she will be loved and pampered like a real princess."
         ],
-        "photo": "https://i.redd.it/name-her-please-ginger-female-persian-4-months-old-v0-vt6euqt7lmuc1.jpg?width=1836&format=pjpg&auto=webp&s=84aa5758bdfaf6826ae834d3980a670f5cd955df"
-    },
+        "photo": "https://i.redd.it/name-her-please-ginger-female-persian-4-months-old-v0-vt6euqt7lmuc1.jpg?width=1836&format=pjpg&auto=webp&s=84aa5758bdfaf6826ae834d3980a670f5cd955df",
+        "age": "0.7 year"
+      },
     {
         "id": 5,
         "name": "Simba",
@@ -53,7 +57,8 @@
           "hugs to everyone around him. Despite his miniature size, he has a big heart of a true protector. Simba dreams of finding",
           " a family to whom he will be happy to give his boundless love and devotion."
         ],
-        "photo": "https://cdn.pixabay.com/photo/2023/03/14/07/51/dog-7851712_1280.jpg"
+        "photo": "https://cdn.pixabay.com/photo/2023/03/14/07/51/dog-7851712_1280.jpg",
+        "age": "1 year"
     },
     {
         "id": 6,
@@ -64,7 +69,8 @@
           " adds to her mystery. Calm, gentle and very sensitive, she loves cozy places, soft blankets and warm hands. Sora is ",
           "looking for a home where she can purr with happiness and fill the space with peace and love."
         ],
-        "photo": "https://media-be.chewy.com/wp-content/uploads/2023/07/03175950/Ragdoll-cat-breed-with-blue-eyes.jpg"
+        "photo": "https://media-be.chewy.com/wp-content/uploads/2023/07/03175950/Ragdoll-cat-breed-with-blue-eyes.jpg",
+        "age": "3 year"
     },
     {
         "id": 7,
@@ -76,7 +82,8 @@
           "too cruel. But we believe: a loving family will be able to give him warmth that will melt the ice of loneliness and open ",
           "the door to true happiness. Oscar is waiting for you to believe in love again."
         ],
-        "photo": "https://i.redd.it/mzbh7kmt1dc51.jpg"
+        "photo": "https://i.redd.it/mzbh7kmt1dc51.jpg",
+        "age": "5 years"
     },
     {
         "id": 8,
@@ -88,7 +95,8 @@
           "experienced many difficulties, Flash continues to believe that he will find his true home, where he will be accepted with ",
           "love and care. He is looking for his corner, where he can feel safe and be part of the family."
         ],
-        "photo": "https://www.purina.co.uk/sites/default/files/styles/square_medium_440x440/public/2022-07/Australian%20Shepherd%20dog%202.jpg?h=9fab8356&itok=JqLTh2Yn"
+        "photo": "https://www.purina.co.uk/sites/default/files/styles/square_medium_440x440/public/2022-07/Australian%20Shepherd%20dog%202.jpg?h=9fab8356&itok=JqLTh2Yn",
+        "age": "3 years"
     },
     {
         "id": 9,
@@ -100,7 +108,8 @@
           "everyone around her. Despite her size, Roxie has a huge heart, ready for boundless devotion. If you are looking for a",
           " little furry friend who will give you lots of laughter and warmth, Roxie is your choice."
         ],
-        "photo": "https://hips.hearstapps.com/ghk.h-cdn.co/assets/17/44/havenese.jpg?crop=1xw:0.9992927864214993xh;center,top&resize=980:*"
+        "photo": "https://hips.hearstapps.com/ghk.h-cdn.co/assets/17/44/havenese.jpg?crop=1xw:0.9992927864214993xh;center,top&resize=980:*",
+        "age": "2 years"
     },
     {
         "id": 10,
@@ -113,6 +122,7 @@
           " needs to be understood, and then he will become the greatest friend and best companion for those who are ready to ",
           "accept him for who he is."
         ],
-        "photo": "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/16093527/Labrador-retriever-head-portrait-indoors.jpg"
+        "photo": "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/16093527/Labrador-retriever-head-portrait-indoors.jpg",
+        "age": "5 years"
     }
 ]

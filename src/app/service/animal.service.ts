@@ -8,6 +8,7 @@ export interface Animal {
   breed: string;
   description: string;
   photo: string;
+  age: string;
 }
 
 @Injectable({
