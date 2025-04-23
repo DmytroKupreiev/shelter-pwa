@@ -1,0 +1,50 @@
+.not-found-content {
+    --background: #e8e8e8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .animation-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .digit {
+    font-size: 100px;
+    font-weight: bold;
+    color: #274137;
+    animation: fall 1s ease-in-out infinite alternate;
+  }
+  
+  .digit:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  
+  .digit:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  
+  @keyframes fall {
+    0% { transform: translateY(0); opacity: 0.7; }
+    100% { transform: translateY(10px); opacity: 1; }
+  }
+  
+  .message h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  
+  .message p {
+    font-size: 18px;
+    color: #555;
+  }
+  

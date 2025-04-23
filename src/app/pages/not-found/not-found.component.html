@@ -1,3 +1,9 @@
-<p>
-  not-found works!
-</p>
+<ion-content class="not-found-content">
+  <div class="animation-container">
+    <div class="digit" *ngFor="let digit of ['4', '0', '4']">{{ digit }}</div>
+  </div>
+  <div class="message">
+    <h2>Something went wrong</h2>
+    <p>404 - Not Found</p>
+  </div>
+</ion-content>
