@@ -11,7 +11,7 @@ import { AnimalService, Animal } from '../../service/animal.service';
   styleUrls: ['./animals.component.scss'],
   imports: [ CommonModule, RouterModule, IonHeader, IonToolbar, IonTitle, IonContent, IonCard, IonCardHeader, IonCardTitle, IonImg]
 })
-export class AnimalsComponent  implements OnInit {
+export class AnimalsComponent  implements OnInit, AfterViewInit {
 
   animals: Animal[] = [];
 

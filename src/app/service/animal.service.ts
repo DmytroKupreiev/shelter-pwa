@@ -28,4 +28,11 @@ export class AnimalService {
       map(animals => animals.sort(() => 0.5 - Math.random()).slice(0, count))
     );
   }
+  
+  getAnimalById(id: number): Observable<Animal | undefined> {
+    return this.getAnimals().pipe(
+      map(animals => animals.find(animal => animal.id === id))
+    );
+  }
+  
 }

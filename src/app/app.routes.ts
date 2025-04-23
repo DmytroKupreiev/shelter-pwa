@@ -11,7 +11,7 @@ export const routes: Routes = [
   },
   {
     path: 'animals/:id',
-    loadComponent: () => import('./pages/animal-detail/animal-detail.component').then((m) => m.AnimalDetailComponent),
+    loadComponent: () => import('./pages/animal-detail/animal-detail.component').then((m) => m.AnimalDetailsComponent),
   },
   {
     path: 'contact',

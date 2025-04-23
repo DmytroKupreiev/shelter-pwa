@@ -1,3 +1,25 @@
-<p>
-  animal-detail works!
-</p>
+<ion-header class="finisher-header">
+  <ion-toolbar>
+    <ion-title>Animal Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="animal" class="animal-details-card">
+    <img [src]="animal.photo" class="animal-details-image" />
+    <div class="animal-details-info">
+      <h2>{{ animal.name }}</h2>
+      <p><strong>Breed:</strong> {{ animal.breed }}</p>
+      <p *ngIf="animal.age"><strong>Age:</strong> {{ animal.age }}</p>
+      <div *ngIf="animal.description && animal.description.length > 0">
+        <p *ngFor="let line of animal.description">{{ line }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="back-button-container">
+    <button class="button" (click)="navigateToList()">
+      <p>Back to list</p>
+    </button>
+  </div>
+</ion-content>
