@@ -23,6 +23,10 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/contact/contact.component').then((m) => m.ContactComponent),
   },
   {
+    path: 'favourites',
+    loadComponent: () => import('./pages/favourites/favourites.component').then(m => m.FavouritesComponent)
+  },  
+  {
     path: '**',
     loadComponent: () => import('./pages/not-found/not-found.component').then((m) => m.NotFoundComponent),
   }

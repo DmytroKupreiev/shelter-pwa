@@ -35,7 +35,7 @@ export class AnimalsComponent  implements OnInit {
     this.router.navigate(['/home']);
   }
   navigateToFavorites(){
-
+    this.router.navigate(['/favourites']);
   }
   navigateToContacts(){
     this.router.navigate(['/contact']);
