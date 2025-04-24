@@ -16,7 +16,7 @@ export interface Animal {
   providedIn: 'root' // Service available app-wide
 })
 export class AnimalService {
-  private apiUrl = 'assets/data/animals.json'; // Data source path
+  private apiUrl = 'https://gist.githubusercontent.com/DmytroKupreiev/871a05ad404f845d0b6761feb1677aec/raw/e4c493749b9322edff39947ddf3891e24560fa33/animals.json'; // Data source path
 
   constructor(private http: HttpClient) {} // Inject HTTP client
 
