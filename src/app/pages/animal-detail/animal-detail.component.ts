@@ -18,14 +18,15 @@ import { Toast } from '@capacitor/toast';
   imports: [IonFabButton, IonFab, IonButtons, IonIcon, IonButton, CommonModule, IonHeader, IonToolbar, IonTitle, IonContent, FinisherHeaderComponent]
 })
 export class AnimalDetailsComponent implements OnInit {
-  animal?: Animal;
+  animal?: Animal; // Currently displayed animal
 
   constructor(
-    private route: ActivatedRoute,
-    private animalService: AnimalService,
-    private router: Router,
-    private favouriteService: FavouriteService,
+    private route: ActivatedRoute, // For getting route parameters
+    private animalService: AnimalService, // Animal data service
+    private router: Router, // For navigation
+    private favouriteService: FavouriteService, // Favorites functionality
   ) {
+    // Register Ionic icons used in the template
     addIcons({
       'home-outline': homeOutline,
       'list-outline': listOutline,
@@ -37,6 +38,7 @@ export class AnimalDetailsComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    // Get animal ID from route and fetch details
     const id = Number(this.route.snapshot.paramMap.get('id'));
     this.animalService.getAnimalById(id).subscribe({
       next: (data) => this.animal = data,
@@ -44,6 +46,7 @@ export class AnimalDetailsComponent implements OnInit {
     });
   }
 
+  // Share animal details via native share dialog
   async shareAnimal() {
     if (!this.animal) return;
 
@@ -56,6 +59,7 @@ export class AnimalDetailsComponent implements OnInit {
       });
     } catch (error) {
       console.error('Error:', error);
+      // Fallback: Copy link to clipboard
       await Toast.show({
         text: 'Link copied to clipboard!',
         duration: 'short'
@@ -64,12 +68,14 @@ export class AnimalDetailsComponent implements OnInit {
     }
   }
 
+  // Add current animal to favorites
   addToFavourites() {
     if (this.animal) {
       this.favouriteService.addFavourite(this.animal);
     }
   }
 
+  // Navigation methods
   navigateToList() {
     this.router.navigate(['/animals']);
   }

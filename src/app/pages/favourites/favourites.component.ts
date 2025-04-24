@@ -18,49 +18,63 @@ import { homeOutline, listOutline, heartOutline, callOutline, heart } from 'ioni
   styleUrls: ['./favourites.component.scss']
 })
 export class FavouritesComponent implements OnInit {
-  favourites: Animal[] = [];
+  favourites: Animal[] = []; // Array to store favorite animals
 
-  constructor(private favouriteService: FavouriteService, private router: Router) {
-    addIcons({ 'home-outline': homeOutline, 
-               'list-outline': listOutline, 
-               'call-outline': callOutline, });
+  constructor(
+    private favouriteService: FavouriteService, // Favorites service injection
+    private router: Router // Router injection
+  ) {
+    // Register Ionic icons
+    addIcons({ 
+      'home-outline': homeOutline,
+      'list-outline': listOutline,
+      'call-outline': callOutline,
+    });
   }
 
   async ngOnInit() {
-    await this.loadFavourites();
+    await this.loadFavourites(); // Load favorites on init
   }
 
+  // Load favorite animals from service
   async loadFavourites() {
     this.favourites = await this.favouriteService.getFavourites();
   }
 
+  // Remove animal from favorites
   async removeFromFavourites(animalId: number) {
     await this.favouriteService.removeFavourite(animalId);
-    await this.loadFavourites();
+    await this.loadFavourites(); // Refresh list
   }
 
+  // Navigate to animal details page
   goToAnimal(animal: Animal) {
     this.router.navigate(['/animal-detail', animal.id]);
   }
 
+  // Navigation methods
   navigateToList() {
-    this.router.navigate(['/animals']);
+    this.router.navigate(['/animals']); // Animals list
   }
+  
   navigateToHome() {
-    this.router.navigate(['/home']);
+    this.router.navigate(['/home']); // Home page
   }
-  navigateToContacts(){
-    this.router.navigate(['/contact']);
+  
+  navigateToContacts() {
+    this.router.navigate(['/contact']); // Contact page
   }
 
-  showToast = false;
-  toastMessage = '';
+  // Toast notification properties
+  showToast = false; // Toast visibility flag
+  toastMessage = ''; // Toast message content
 
+  // Show adoption confirmation toast
   adoptAnimal(name: string) {
     this.toastMessage = `Thank you! We will contact you regarding ${name} within half an hour.`;
     this.showToast = true;
     setTimeout(() => {
-      this.showToast = false;
+      this.showToast = false; // Hide after 3 seconds
     }, 3000);
   }
 

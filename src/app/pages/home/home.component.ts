@@ -13,27 +13,34 @@ import { FinisherHeaderComponent } from '../../custom-components/finisher-header
   imports: [CommonModule, IonCardContent, IonCardTitle, IonCardHeader, IonCard, IonHeader, IonToolbar, IonTitle, IonContent, FinisherHeaderComponent],
 })
 export class HomeComponent implements OnInit {
+  animals: Animal[] = []; // Array for all animals
+  randomAnimals: Animal[] = []; // Array for featured random animals
 
-  constructor(private animalService: AnimalService, private router: Router) {}
-
-  animals: Animal[] = [];
-  randomAnimals: Animal[] = [];
+  constructor(
+    private animalService: AnimalService, // Animal data service
+    private router: Router // Router for navigation
+  ) {}
 
   ngOnInit(): void {
+    // Load all animals
     this.animalService.getAnimals().subscribe({
       next: (data) => this.animals = data,
       error: (err) => console.error('Error loading animals', err)
     });
+    
+    // Load featured random animals
     this.animalService.getRandomAnimals(1).subscribe({
       next: (data) => this.randomAnimals = data,
       error: (err) => console.error('Error loading random animals', err)
     });
   }
 
+  // Navigate to animals list page
   navigateToAnimals() {
     this.router.navigate(['/animals']);
   }
 
+  // Navigate to contact page
   navigateToContact() {
     this.router.navigate(['/contact']);
   }
