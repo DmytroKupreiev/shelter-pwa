@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { IonHeader, IonToolbar, IonTitle, IonContent, IonCard, IonCardHeader, IonCardTitle, IonCardContent } from '@ionic/angular/standalone';
+import { IonHeader, IonToolbar, IonTitle, IonContent, IonCard, IonCardHeader, IonCardTitle, IonCardContent, ViewDidEnter } from '@ionic/angular/standalone';
 import { AnimalService, Animal } from '../../service/animal.service';
 import { Router } from '@angular/router';
 import { FinisherHeaderComponent } from '../../custom-components/finisher-header.component';
@@ -13,6 +13,7 @@ import { FinisherHeaderComponent } from '../../custom-components/finisher-header
   imports: [CommonModule, IonCardContent, IonCardTitle, IonCardHeader, IonCard, IonHeader, IonToolbar, IonTitle, IonContent, FinisherHeaderComponent],
 })
 export class HomeComponent implements OnInit {
+
   constructor(private animalService: AnimalService, private router: Router) {}
 
   animals: Animal[] = [];
@@ -28,7 +29,7 @@ export class HomeComponent implements OnInit {
       error: (err) => console.error('Error loading random animals', err)
     });
   }
-  
+
   navigateToAnimals() {
     this.router.navigate(['/animals']);
   }
