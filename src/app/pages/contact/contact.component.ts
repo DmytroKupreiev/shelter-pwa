@@ -28,6 +28,6 @@ export class ContactComponent {
     this.router.navigate(['/home']);
   }
   navigateToFavorites(){
-
+    this.router.navigate(['/favourites']);
   }
 }

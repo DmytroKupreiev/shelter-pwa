@@ -1,10 +1,4 @@
-@import '../animals/animals.component.scss';
-
-ion-content {
-    --background: rgb(232, 232, 232) !important;
-    background: rgb(232, 232, 232) !important;
-    padding: 24px;
-  }
+@import '../../../styles/shared';
   
   .contact-card {
     background-color: #274137;

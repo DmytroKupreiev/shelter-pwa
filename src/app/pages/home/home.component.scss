@@ -1,35 +1,4 @@
-.finisher-header {
-  position: relative;
-  height: 150px;
-  background: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  
-  --background: transparent;
-  --ion-toolbar-background: transparent;
-  --ion-toolbar-border-color: transparent;
-
-  ion-toolbar {
-    --background: transparent;
-    --border-width: 0 !important;
-    --border-color: transparent;
-    background: transparent !important;
-    box-shadow: none;
-    color: white;
-    justify-content: center;
-
-    ion-title {
-      width: 100%;
-      text-align: center;
-      font-size: 32px;
-      font-weight: bold;
-      color: white;
-      background: transparent !important;
-      --background: transparent;
-    }
-  }
-}
+@import '../../../styles/shared';
 
 .cards-container {
   display: flex;
