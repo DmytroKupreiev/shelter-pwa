@@ -37,9 +37,11 @@
   </div>
 
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-    <ion-fab-button (click)="addToFavourites()">
+    <ion-fab-button (click)="shareAnimal()" color="primary">
+      <ion-icon name="share-outline"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-button (click)="addToFavourites()" color="danger">
       <ion-icon name="heart"></ion-icon>
     </ion-fab-button>
   </ion-fab>
 </ion-content>
-
