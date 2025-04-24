@@ -101,4 +101,4 @@ graph TD
 - [x] Multi-language support
 
 ## Documentation
-For a complete user guide, see [Wiki]().
+For a complete user guide, see [Wiki](https://github.com/DmytroKupreiev/shelter-pwa/wiki).
