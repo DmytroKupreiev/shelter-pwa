@@ -99,3 +99,6 @@ graph TD
 - [x] Add push notifications
 - [x] Dark mode support
 - [x] Multi-language support
+
+## Documentation
+For a complete user guide, see [Wiki]().
