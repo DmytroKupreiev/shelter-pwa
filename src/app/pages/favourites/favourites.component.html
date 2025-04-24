@@ -1,0 +1,50 @@
+<app-finisher-header></app-finisher-header>
+
+<ion-header class="finisher-header">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button fill="clear" (click)="navigateToHome()">
+        <ion-icon name="home-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+      <ion-button fill="clear" (click)="navigateToList()">
+        <ion-icon name="list-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+      <ion-button fill="clear" (click)="navigateToContacts()">
+        <ion-icon name="call-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Favourites!</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="favourites.length > 0; else noFavourites" class="animal-grid-wrapper">
+    <div class="animal-grid">
+      <div class="animal-card" *ngFor="let animal of favourites" (click)="goToAnimal(animal)">
+        <ion-img [src]="animal.photo" alt="{{ animal.name }}"></ion-img>
+        <ion-card-header>
+          <ion-card-title>{{ animal.name }}</ion-card-title>
+          <p>Age: {{ animal.age }}</p>
+        </ion-card-header>
+        <div class="button-group" (click)="$event.stopPropagation()">
+          <ion-button fill="outline" color="danger" size="small" (click)="removeFromFavourites(animal.id)">
+            Remove
+          </ion-button>
+          <ion-button fill="solid" color="success" size="small" (click)="adoptAnimal(animal.name)">
+            Adopt me!
+          </ion-button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #noFavourites>
+    <div style="text-align: center; margin-top: 50px; font-size: 18px; color: gray;">
+      Add animals to adopt!
+    </div>
+  </ng-template>
+
+  <div *ngIf="showToast" class="custom-toast">
+    {{ toastMessage }}
+  </div>
+</ion-content>
